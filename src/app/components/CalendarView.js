@@ -38,16 +38,16 @@ export default function CalendarView() {
 
   return (
     <div className="mt-8 space-y-6">
-      {/* Frequency + Calendars */}
+
       <div className="flex flex-col md:flex-row md:items-start md:justify-center gap-10">
-        {/* Frequency */}
+      
         <div className="w-full md:w-auto">
           <FrequencySelector />
         </div>
 
-        {/* Calendars */}
+      
         <div className="flex flex-col md:flex-row gap-6">
-          {/* Start Date Calendar */}
+ 
           <div className="border-2 border-white rounded-xl p-4 shadow-lg bg-blue-900">
             <h2 className="text-xl font-bold mb-2 text-white text-center">
               Start Date
@@ -62,7 +62,7 @@ export default function CalendarView() {
             />
           </div>
 
-          {/* End Date Calendar */}
+        
           <div className="border-2 border-white rounded-xl p-4 shadow-lg bg-blue-900">
             <h2 className="text-xl font-bold mb-2 text-white text-center">
               End Date
@@ -78,7 +78,7 @@ export default function CalendarView() {
         </div>
       </div>
 
-      {/* Output Dates */}
+
       {selectedStartDate && selectedEndDate && (
         <div className="mt-4 text-white text-center">
           <p className="font-semibold mb-2">
@@ -94,7 +94,7 @@ export default function CalendarView() {
         </div>
       )}
 
-      {/* Calendar highlight */}
+
       <style jsx global>{`
         .highlight {
           background: #bfdbfe !important;

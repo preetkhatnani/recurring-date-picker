@@ -6,7 +6,7 @@ import React from 'react';
 import { format, addDays, addWeeks, addMonths } from 'date-fns';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import FrequencySelector from './FrequencySelector'; // ✅ IMPORT THIS
+import FrequencySelector from './FrequencySelector'; 
 
 export default function RecurringDatePicker() {
   const { frequency } = useRecurringStore();
@@ -16,7 +16,7 @@ export default function RecurringDatePicker() {
     if (!selectedDate) return [];
 
     const base = new Date(selectedDate);
-    const result = [base]; // include the selected date
+    const result = [base]; 
 
     if (frequency === 'daily') {
       for (let i = 1; i <= 7; i++) {
@@ -41,7 +41,6 @@ export default function RecurringDatePicker() {
     <div className="mt-6">
       <h2 className="text-2xl font-bold mb-4">Recurring Date Picker</h2>
 
-      {/* ✅ Add FrequencySelector here */}
       <FrequencySelector />
 
       <div aria-label="Start Date Calendar">
